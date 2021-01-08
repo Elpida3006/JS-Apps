@@ -1,2 +1,2 @@
 # JS-Apps
-Small projects with JavaScript, Firebase/Firestore.
+    Small JavaScript Apps with Handlebars view engine, Routing and  Firebase DataBase.
