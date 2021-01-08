@@ -1,0 +1,18 @@
+{{> header}}
+<div class="container">
+    <div class="about-us">
+        <div>
+            <img src="./public/shoes.jpg" alt="">
+            <img src="./public/shoes2.jpg" alt="">
+        </div>
+        {{#if isLoggedIn}}
+         
+        {{else}}
+        <p>
+            <a href="#/register">Register Now</a> and Try it!
+        </p>
+        {{/if}}
+       
+    </div>
+</div>
+{{> footer}}

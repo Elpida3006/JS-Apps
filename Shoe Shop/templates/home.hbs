@@ -1,0 +1,34 @@
+  {{> header}}
+  
+  <div class="container">
+  
+    {{#if isLoggedIn}}
+          <div class="shoes">
+              {{#each offers}}
+                <div class="shoe">
+                <img src="{{this.imageUrl}}">
+                <h3>{{this.model}}</h3>
+            
+                <a href="#/details/{{id}}">Buy it for ${{this.price}}</a>
+            </div>
+            {{else}}
+            <p>No shoes to display. Be first to create a new offer...</p>
+            {{/each}}
+        </div>
+        
+    {{else}}
+    <div class="about-us">
+        <div>
+            <img src="./public/shoes.jpg" alt="">
+            <img src="./public/shoes2.jpg" alt="">
+        </div>
+        <p>
+            <a href="#/register">Register Now</a> and Try it!
+        </p>
+            
+    </div>
+    {{/if}}
+   
+</div>
+  
+{{> footer}}
