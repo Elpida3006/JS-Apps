@@ -13,9 +13,7 @@ const app = Sammy('#root', function() {
                 add_Header_Footer(context)
                     .then(function() {
                         this.partial('./templates/home.hbs');
-                    })
-
-          
+                    })     
     });
     
 
