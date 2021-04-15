@@ -1,0 +1,29 @@
+{{> header}}
+{{> notification}}
+
+<!-- Details Dashboard  -->
+<section id="viewMydestinations">
+    <h3>Your destinations</h3>
+    {{#each userDestinations}}
+    <div class="destination-ticket">
+        <div class="destination-left">
+            <img src="{{this.imgUrl}}" alt="">
+        </div>
+        <div class="destination-right">
+            <div>
+                <h3>{{this.destination}}</h3><span>{{this.departureDate}}</span>
+            </div>
+            <div>
+                to {{this.city}}
+            </div>
+            <p>{{this.duration}} days </p>
+            <a href="#/remove/{{id}}" class="remove">REMOVE</a>
+            <a href="#/details/{{id}}" class="details">Details</a>
+        </div>
+    </div>
+    {{else}}
+    <h4>You have no destinations! Create the first one.</h4>
+    {{/each}}
+</section>
+
+{{> footer}}
