@@ -1,0 +1,15 @@
+#successBox{
+background-color: aquamarine;
+color: black;
+}
+
+
+
+#loadingBox{
+background-color: darkblue;
+color: aliceblue;
+           }
+#errorBox{
+       background-color: brown;        
+       color: aliceblue;
+           }
