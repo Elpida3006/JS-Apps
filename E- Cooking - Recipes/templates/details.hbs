@@ -1,0 +1,37 @@
+{{> header}}
+{{> notifications}}
+
+     <div class="row form-layout p-5">
+            <div class="col-md-12">
+                <div class="recepieInfo">
+                    <div class="detailsFoodImage">
+                        <img src="https://t3.ftcdn.net/jpg/00/25/90/48/240_F_25904887_fhZJ692ukng3vQxzHldvuN981OiYVlJ1.jpg"
+                            alt="">
+                    </div>
+
+                    <div class="infoPack">
+                        <h3 class="my-3">{{recipe.meal}}</h3>
+                        <p class="prep-method">{{recipe.prepMethod}}</p>
+                        <p class="description">{{recipe.description}}</p>
+                    </div>
+                    <div class="actions">
+                        {{#if recipe.isCreator}}
+                        <a class="btn btn-danger" href="#/archive/{{recipe.id}}">Archive</a>
+                        <a class="btn btn-info" href="#/edit/{{recipe.id}}">Edit</a>
+                        {{else }}
+                        <a class="btn btn-success" href="#/like/{{recipe.id}}"> {{recipe.like}} likes</a>
+                        {{/if}}
+                    </div>
+                </div>
+
+                <div class="detailsIngredients">
+                    <h3 class="my-3 ingredient">Ingredients</h3>
+                    <ul>
+                         {{#each recipe.ingredients}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+{{> footer}}

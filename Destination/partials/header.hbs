@@ -1,0 +1,24 @@
+<!-- Header -->
+<nav>
+     {{#if isLoggedIn}}
+    <div class="left-container">
+        <ul>
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/my-destinations">Destinations</a></li>
+            <li><a href="#/add">Add +</a></li>
+        </ul>
+    </div>
+    <div class="right-container">
+        <span>Welcome, {{userEmail}} |</span>
+        <a href="#/logout" class="log-out">Logout</a>
+    </div>
+    {{else}}
+    <div class="left-container">
+        <ul>
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/login">Login</a></li>
+            <li><a href="#/register">Register</a></li>
+        </ul>
+    </div>
+    {{/if}}
+</nav>

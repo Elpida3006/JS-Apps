@@ -1,0 +1,23 @@
+    {{> header}}
+{{> notifications}}
+   <section id="my-pets-page" class="my-pets">
+            <h1>My Pets</h1>
+            <!-- Display ul: with list-items for every user's pet (if any) -->
+            <ul class="my-pets-list">
+            {{#if userPets}}
+            {{#each userPets}}
+                 <li class="otherPet">
+                    <h3>Name: {{this.name}}</h3>
+                    <p>Type: {{this.type}}</p>
+                    <p class="img"><img src="{{this.imageUrl}}"></p>
+                    <a class="button" href="#/details/{{id}}">Details</a>
+                </li>
+             
+            </ul>
+ {{/each}}
+            {{else}}
+        <!-- Display paragraph: If the user doesn't have his own pets  -->
+            <p class="no-pets">No pets in database!</p>
+             {{/if}}
+        </section>
+ {{> footer}}
